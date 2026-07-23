@@ -1,0 +1,13 @@
+# The classics
+.DS_Store
+.idea
+*.log
+tmp/
+
+# Tex stuff
+.auctex-auto/
+*.aux
+*.dvi
+*.blg
+*.bbl
+*.pdf
