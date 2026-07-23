@@ -76,8 +76,13 @@ endfunction
 ## printf("Iterations: %d\n", iterations);
 ## printf("Estimated error: %.2e\n", final_err);
 
-% Arbitrary function
-## expr = input("Enter f(x): ", "s");
-## f = eval(["@(x) " expr]);
-##
-## disp(f(2))
+% Arbitrary function:
+expr = input("Enter f(x): ", "s");
+f = eval(["@(x) " expr]);
+
+interval = input("Enter [a, b]: ");
+[root, iterations, final_err] = bisection(f, interval(1), interval(2));
+
+printf("Root found: %.8f\n", root);
+printf("Iterations: %d\n", iterations);
+printf("Estimated error: %.2e\n", final_err);
